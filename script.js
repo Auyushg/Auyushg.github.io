@@ -8,3 +8,4 @@ document.addEventListener('DOMContentLoaded', function () {
     mainContent.classList.toggle('active');
   });
 });
+
