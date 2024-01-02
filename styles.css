@@ -38,9 +38,15 @@ body {
   margin-right: 10px;
 }
 
-.main-content {
+
+.content-container {
   width: 75%;
   padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content {
+  width: 100%;
 }
 
 h1 {
