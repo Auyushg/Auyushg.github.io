@@ -15,6 +15,7 @@ body {
 
 .container {
   display: flex;
+  align-items: flex-start;
 }
 
 .sidebar {
@@ -37,7 +38,7 @@ body {
 }
 
 .main-content.active {
-  margin-left: 0; /* Adjust the margin as needed */
+  margin-left: 25%; /* Adjust to match the width of the sidebar */
 }
 
 h1 {
@@ -48,4 +49,3 @@ p {
   color: #555;
   line-height: 1.6;
 }
-
