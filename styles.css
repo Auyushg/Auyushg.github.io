@@ -15,7 +15,6 @@ body {
 
 .container {
   display: flex;
-  align-items: flex-start;
 }
 
 .sidebar {
@@ -38,7 +37,7 @@ body {
 }
 
 .main-content.active {
-  margin-left: 25%; /* Adjust to match the width of the sidebar */
+  margin-left: 0; /* Adjust the margin as needed */
 }
 
 h1 {
