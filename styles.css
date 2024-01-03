@@ -48,13 +48,16 @@ body {
   width: 75%;
   padding: 20px;
   margin-left: 25%; /* Adjust to match the width of the sidebar */
+  text-align: center;
 }
 
 h1 {
   color: #333;
+  text-align: center;
 }
 
 p {
   color: #555;
   line-height: 1.6;
+  text-align: center;
 }
