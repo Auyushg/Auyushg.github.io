@@ -43,6 +43,9 @@ body {
   display: block;
   margin: 0 auto 20px; /* Centers the image */
 }
+.social-links img {
+  width: 30px; /* Adjust the width of the social media icons */
+  height: 30px; /* Adjust the height of the social media icons */
 
 .main-content {
   width: 75%;
