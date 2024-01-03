@@ -30,8 +30,8 @@ body {
 }
 
 .sidebar img {
-  width: 100px; /* Adjust width as needed */
-  height: 100px; /* Adjust height as needed */
+  width: 200px; /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed */
   border-radius: 50%; /* Makes the image round (for a circular profile picture) */
   display: block;
   margin-bottom: 20px; /* Add margin as needed */
