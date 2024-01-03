@@ -14,6 +14,10 @@ body {
   left: 10px;
   z-index: 999;
 }
+.toggle-sidebar img {
+  width: 20px; /* Set the width of the icon */
+  height: 20px; /* Set the height of the icon */
+  vertical-align: middle; /* Align icon vertically within the button */
 
 .container {
   display: flex;
