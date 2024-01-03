@@ -47,7 +47,7 @@ body {
 .main-content {
   width: 75%;
   padding: 20px;
-  margin-left: 25%; /* Adjust to match the width of the sidebar */
+  margin-left: 15%; /* Adjust to match the width of the sidebar */
   text-align: left;
 }
 
