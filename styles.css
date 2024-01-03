@@ -12,7 +12,7 @@ body {
   position: fixed;
   top: 10px;
   left: 10px;
-  z-index: 999;
+  z-index: 1000;
 }
 .toggle-sidebar img {
   width: 30px; /* Set the width of the icon */
