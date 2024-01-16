@@ -57,18 +57,17 @@ body {
 
 .main-content {
   width: 75%;
-  padding: 20px;
-  margin-left: 0%; /* Adjust to match the width of the sidebar */
-  text-align: left;
+  padding: 20px
+  text-align: center;
 }
 
 h1 {
   color: #333;
-  text-align: left;
+  text-align: center;
 }
 
 p {
   color: #555;
   line-height: 1.6;
-  text-align: left;
+  text-align: center;
 }
