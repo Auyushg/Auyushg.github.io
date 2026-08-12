@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auyush Ganapathy - Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo"><strong>AUYUSH GANAPATHY</strong><span>//</span>COMPUTATIONAL ENGINEERING PORTFOLIO</div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">About Me</a></li>
+      <li><a href="../projects.html" aria-current="page">Projects</a></li>
+      <li><a href="../resume.html">Resume</a></li>
+      <li><a href="../contact.html">Contact Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="page-header">
+
+  <div class="page-header-inner">
+
+    <div>
+
+      <div class="eyebrow">
+        ORGANIZATION CONTRIBUTION
+      </div>
+
+      <h1>Longhorn Rocketry Association Simulations</h1>
+
+      <p>
+        Developing reliable and high-fidelity simulations for our rocketry team's competition performance
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+<aside class="project-side-nav">
+
+  <!-- BACK -->
+  <a href="../projects.html" class="side-nav-button side-nav-back">
+    <span class="side-nav-number">←</span>
+    <span class="side-nav-text">Back</span>
+  </a>
+
+  <!-- OBJECTIVE -->
+  <a href="#engineering-objective" class="side-nav-button">
+    <span class="side-nav-number">00</span>
+    <span class="side-nav-text">Engineering Objective</span>
+  </a>
+
+  <!-- 2025-2026 -->
+  <a href="#simulation-25-26" class="side-nav-button">
+    <span class="side-nav-number">01</span>
+    <span class="side-nav-text">25–26 Simulation</span>
+  </a>
+
+  <a href="#airbrakes-25-26" class="side-nav-button">
+    <span class="side-nav-number">02</span>
+    <span class="side-nav-text">25–26 Airbrakes</span>
+  </a>
+
+  <!-- 2026-2027 -->
+  <a href="#simulation-26-27" class="side-nav-button">
+    <span class="side-nav-number">03</span>
+    <span class="side-nav-text">26–27 School Year</span>
+  </a>
+
+  <!-- GITHUB -->
+  <a
+    href="https://github.com/Auyushg/LRA"
+    class="side-nav-button side-nav-github"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span class="side-nav-number">&lt;/&gt;</span>
+    <span class="side-nav-text">GitHub Repo</span>
+  </a>
+
+</aside>
+
+<main class="case-study">
+
+  <section class="case-section"  id="engineering-objective">
+
+    <div class="wrap">
+
+      <div class="case-section-heading">
+
+        <span class="case-number">00</span>
+
+        <div>
+          <h2>Engineering Objective</h2>
+        </div>
+
+      </div>
+
+
+      <div class="case-two-column">
+
+        <div class="case-copy">
+
+          <p>
+            The eningeering objective is to develop a high fidelity simulation for accurately predicting the apogee and trajectory of LRA's
+            competition rocket.
+          </p>
+
+        </div>
+
+
+        <div class="engineering-specs">
+
+          <div class="spec">
+            <span>OBJECTIVE</span>
+            <strong>Develop an accurate simulation of our competition rocket</strong>
+          </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="case-section" id="simulation-25-26">
+
+  <div class="wrap">
+
+    <div class="case-section-heading">
+
+      <span class="case-number">01</span>
+
+      <div>
+        <div class="eyebrow">2025–2026</div>
+        <h2>2025-2026 School Year Rocket</h2>
+      </div>
+
+    </div>
+
+
+    <div class="case-copy case-copy-wide">
+
+      <h2>Using RocketPy</h2>
+
+      <p>
+        I used RocketPy to build a full-flight numerical model of the vehicle,
+        including propulsion, mass properties, aerodynamic geometry, recovery
+        systems, launch-rail conditions, and atmospheric effects.
+      </p>
+
+      <p>
+        RocketPy integrates the vehicle dynamics through flight, allowing the
+        same model to be used for trajectory prediction, stability analysis,
+        parachute deployment, and later airbrake-controller development.
+      </p>
+
+    </div>
+
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        SIMULATION MODEL
+      </div>
+
+      <div class="equation">
+        Environment + Motor + Vehicle + Aerodynamics + Recovery → Flight
+      </div>
+
+      <p>
+        Each physical subsystem is defined independently and assembled into a
+        single rocket model before being passed into RocketPy's flight solver.
+      </p>
+
+    </div>
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>ROCKET MODEL</span>
+        <span>ROCKETPY / PYTHON</span>
+      </div>
+
+<pre><code>olympus = Rocket(
+    radius=7.858125 / 100,
+    mass=23473 / 1000,
+    inertia=(26.97, 26.97, 0.1265294793),
+    power_off_drag="DragOff.csv",
+    power_on_drag="DragOn.csv",
+    center_of_mass_without_motor=178 / 100,
+    coordinate_system_orientation="nose_to_tail",
+)
+
+olympus.add_motor(
+    aerotechN2000,
+    position=346 / 100
+)</code></pre>
+
+    </div>
+
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        VEHICLE GEOMETRY
+      </div>
+
+      <p>
+        The simulation includes the actual vehicle dimensions and aerodynamic
+        components, including the nose cone, four aft fins, canards, rail
+        buttons, and tail geometry.
+      </p>
+
+    </div>
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>AERODYNAMICS</span>
+        <span>ROCKETPY</span>
+      </div>
+
+<pre><code>nose_cone = olympus.add_nose(
+    length=89.37625 / 100,
+    kind="lvhaack",
+    position=0
+)
+
+fin_set = olympus.add_trapezoidal_fins(
+    n=4,
+    root_chord=30.48 / 100,
+    tip_chord=7.7 / 100,
+    span=14.5288 / 100,
+    position=311.4675 / 100,
+    sweep_length=np.tan(np.radians(40)) * 0.15
+)</code></pre>
+
+    </div>
+
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        RECOVERY SYSTEM
+      </div>
+
+      <p>
+        Drogue, pilot, and main parachutes are incorporated into the same flight
+        model, allowing deployment events and descent rates to be evaluated as
+        part of the complete trajectory.
+      </p>
+
+    </div>
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>RECOVERY</span>
+        <span>ROCKETPY</span>
+      </div>
+
+<pre><code>drogue = olympus.add_parachute(
+    name="drogue",
+    cd_s=1.55,
+    trigger="apogee",
+    sampling_rate=105
+)
+
+main = olympus.add_parachute(
+    name="main",
+    cd_s=2.2,
+    trigger=305,
+    sampling_rate=105
+)</code></pre>
+
+    </div>
+
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        FLIGHT SOLUTION
+      </div>
+
+      <div class="equation">
+        ẋ = f(x, u, atmosphere, vehicle)
+      </div>
+
+      <p>
+        Once the environment and vehicle are defined, RocketPy numerically
+        propagates the complete flight from launch rail departure through
+        powered ascent, coast, apogee, and recovery.
+      </p>
+
+    </div>
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>FLIGHT SIMULATION</span>
+        <span>ROCKETPY</span>
+      </div>
+
+<pre><code>test_flight = Flight(
+    rocket=olympus,
+    environment=env,
+    rail_length=5.2,
+    inclination=84,
+    heading=0
+)
+
+test_flight.prints.maximum_values()
+test_flight.plots.trajectory_3d()
+test_flight.prints.apogee_conditions()</code></pre>
+
+    </div>
+
+  </div>
+ 
+
+</section>
+
+<section class="case-section" id="airbrakes-25-26">
+
+  <div class="wrap">
+
+    <div class="case-section-heading">
+
+      <span class="case-number">03</span>
+
+      <div>
+        <div class="eyebrow">2025–2026</div>
+      </div>
+
+    </div>
+
+
+    <div class="case-copy case-copy-wide">
+
+      <h2>Active Airbrake Deployment</h2>
+
+      <p>
+        To target a 10,000 ft apogee, I developed an active airbrake controller
+        that continuously estimates the rocket's projected apogee during ascent.
+        If the predicted altitude exceeds the target, the controller increases
+        airbrake deployment to generate additional drag and remove energy from
+        the vehicle.
+      </p>
+
+      <p>
+        Deployment is based on the current altitude, vertical velocity,
+        atmospheric density, vehicle mass, Mach number, and the drag coefficient
+        associated with the current airbrake extension.
+      </p>
+
+    </div>
+
+
+    <!-- APogee prediction -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        PROJECTED APOGEE
+      </div>
+
+      <div class="equation">
+        k = ρ C<sub>D</sub>A / 2m
+      </div>
+
+      <div class="equation">
+        ĥ<sub>apogee</sub> =
+        h +
+        1/(2k)
+        ln(1 + kv<sub>z</sub>²/g)
+      </div>
+
+      <p>
+        Rather than using only the vacuum estimate
+        <code>v² / 2g</code>, the controller includes an approximate drag term.
+        This produces a more realistic prediction of how much additional
+        altitude the vehicle will gain before vertical velocity reaches zero.
+      </p>
+
+    </div>
+
+
+    <!-- DRAG MODEL -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        MACH-DEPENDENT AIRBRAKE DRAG
+      </div>
+
+      <div class="equation">
+        C<sub>D</sub> = f(M, δ)
+      </div>
+
+      <p>
+        Airbrake drag changes with both Mach number and deployment level.
+        I use a two-dimensional interpolation table to calculate the drag
+        coefficient for the vehicle's current flight condition and airbrake
+        extension.
+      </p>
+
+    </div>
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>AIRBRAKE DRAG</span>
+        <span>SCIPY / ROCKETPY</span>
+      </div>
+
+<pre><code>current_mach = v_mag / speed_of_sound
+
+mach_clamped = np.clip(
+    current_mach,
+    mach_coords[0],
+    mach_coords[-1]
+)
+
+ext_clamped = np.clip(
+    air_brakes.deployment_level,
+    ext_coords[0],
+    ext_coords[-1]
+)
+
+Cd = float(
+    interp_cd([[ext_clamped, mach_clamped]])
+)</code></pre>
+
+    </div>
+
+
+    <!-- CONTROL -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        DEPLOYMENT CONTROLLER
+      </div>
+
+      <div class="equation">
+        e = h<sub>target</sub> − ĥ<sub>apogee</sub>
+      </div>
+
+      <div class="equation">
+        δ<sub>cmd</sub> =
+        −(K<sub>p</sub>e + K<sub>d</sub>ė)
+      </div>
+
+      <p>
+        A PD controller converts projected-apogee error
+        into an airbrake deployment command. If the rocket is predicted to
+        overshoot, the controller commands greater deployment and therefore
+        greater aerodynamic drag.
+      </p>
+
+    </div>
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>AIRBRAKE CONTROLLER</span>
+        <span>PYTHON</span>
+      </div>
+
+<pre><code>error = h_target - projected_apogee
+
+dt = time - pd_state["prev_time"]
+
+d_error = (
+    (error - pd_state["prev_error"]) / dt
+    if dt > 0 else 0.0
+)
+
+raw_deployment = -(
+    kp * error +
+    kd * d_error
+)</code></pre>
+
+    </div>
+
+
+    <!-- RATE LIMIT -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        ACTUATOR CONSTRAINTS
+      </div>
+
+      <div class="equation">
+        0 ≤ δ ≤ 1
+      </div>
+
+      <div class="equation">
+        |δ<sub>k</sub> − δ<sub>k-1</sub>|
+        ≤ δ̇<sub>max</sub> Δt
+      </div>
+
+      <p>
+        Deployment is limited between fully retracted and fully extended,
+        while a rate limiter prevents unrealistically fast changes in airbrake
+        position.
+      </p>
+
+    </div>
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>DEPLOYMENT LIMIT</span>
+        <span>PYTHON</span>
+      </div>
+
+<pre><code>max_delta = max_rate * max(dt, 1e-6)
+
+deployment = np.clip(
+    raw_deployment,
+    pd_state["prev_level"] - max_delta,
+    pd_state["prev_level"] + max_delta
+)
+
+deployment = np.clip(
+    deployment,
+    0.0,
+    1.0
+)
+
+air_brakes.deployment_level = deployment</code></pre>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="case-section" id="simulation-26-27">
+
+  <div class="wrap">
+
+    <div class="case-section-heading">
+
+      <span class="case-number">03</span>
+
+      <div>
+        <div class="eyebrow">2026–2027</div>
+        <h2>2026–2027 School Year Rocket</h2>
+      </div>
+
+    </div>
+
+    <div class="case-copy case-copy-wide">
+      <p>Coming Soon!</p>
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,2513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Helix Internship Project | Auyush Ganapathy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+
+<body>
+
+<header>
+  <div class="logo">
+    <strong>AUYUSH GANAPATHY</strong>
+    <span>//</span>
+    COMPUTATIONAL ENGINEERING PORTFOLIO
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">About Me</a></li>
+      <li><a href="../projects.html" aria-current="page">Projects</a></li>
+      <li><a href="../resume.html">Resume</a></li>
+      <li><a href="../contact.html">Contact Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!-- PROJECT HEADER -->
+
+<div class="page-header">
+
+  <div class="page-header-inner">
+
+    <div>
+
+      <div class="eyebrow">
+        INTERNSHIP
+      </div>
+
+      <h1>Connection Helix Center for AI and Robotics</h1>
+
+      <p>
+        Reinforcement Learning Development using Issac Lab,
+        YOLO object detection and location using ROS2 Humble
+      </p>
+
+    </div>
+
+    <span class="page-header-eq">
+      design → model → test → iterate
+    </span>
+
+  </div>
+
+</div>
+
+
+
+<main class="case-study">
+  <!-- ========================================
+     PROJECT SIDE NAVIGATION
+     ======================================== -->
+
+<aside class="project-side-nav">
+
+  <!-- BACK -->
+  <a
+    href="../projects.html"
+    class="side-nav-button side-nav-back"
+  >
+    <span class="side-nav-number">←</span>
+    <span class="side-nav-text">Back</span>
+  </a>
+
+
+  <!-- OBJECTIVE -->
+  <a
+    href="#engineering-objective"
+    class="side-nav-button"
+  >
+    <span class="side-nav-number">00</span>
+    <span class="side-nav-text">Engineering Objective</span>
+  </a>
+
+
+  <!-- PHASE 1 -->
+  <a
+    href="#phase-1"
+    class="side-nav-button"
+  >
+    <span class="side-nav-number">01</span>
+    <span class="side-nav-text">Object Detection & Localization</span>
+  </a>
+
+
+  <!-- PHASE 2 -->
+  <a
+    href="#phase-2"
+    class="side-nav-button"
+  >
+    <span class="side-nav-number">02</span>
+    <span class="side-nav-text">Walking Policy</span>
+  </a>
+
+
+  <!-- PHASE 3 -->
+  <a
+    href="#phase-3"
+    class="side-nav-button"
+  >
+    <span class="side-nav-number">03</span>
+    <span class="side-nav-text">LiDAR-Based Object Avoidance</span>
+  </a>
+
+
+  <!-- PHASE 4 -->
+  <a
+    href="#phase-4"
+    class="side-nav-button"
+  >
+    <span class="side-nav-number">04</span>
+    <span class="side-nav-text">Waypoint Navigation</span>
+  </a>
+
+
+  <!-- GITHUB -->
+  <a
+    href="https://github.com/Auyushg/Isaaclab-Path-Navigation-Object-Locator/tree/main"
+    class="side-nav-button side-nav-github"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span class="side-nav-number">&lt;/&gt;</span>
+    <span class="side-nav-text">GitHub Repo</span>
+  </a>
+
+</aside>
+
+
+  <!-- =========================
+       OBJECTIVE
+       ========================= -->
+
+  <section class="case-section"  id="engineering-objective">
+
+    <div class="wrap">
+
+      <div class="case-section-heading">
+
+        <span class="case-number">00</span>
+
+        <div>
+          <h2>Engineering Objective</h2>
+        </div>
+
+      </div>
+
+
+      <div class="case-two-column">
+
+        <div class="case-copy">
+
+          <p>
+            A digital twin of a unitree go2 quadruped is given a specific object – in this case, a “slipping cone” for testing purposes.
+The robot’s goal is to navigate through a warehouse environment with sharp turns and narrow corridors to find this object in simulation
+
+          </p>
+
+          <p>
+            This demonstrates the practical use of AI in robot guidance, navigation, and location in environments where reliable and automated
+            object location systems are necessary
+          </p>
+
+        </div>
+
+
+        <div class="engineering-specs">
+
+          <div class="spec">
+            <span>OBJECTIVE</span>
+            <strong>Automatically find and locate an object in simulation</strong>
+          </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       PHASE 1
+       ========================= -->
+
+  <section class="case-section" id="phase-1">
+
+  <div class="wrap">
+
+    <div class="case-section-heading">
+
+      <span class="case-number">01</span>
+
+      <div>
+        <div class="eyebrow">Phase 1</div>
+        <h2>YOLOv8 ROS2 Object Detection & Localization</h2>
+      </div>
+
+    </div>
+
+
+    <!-- OVERVIEW -->
+
+    <div class="case-copy case-copy-wide">
+
+      <p>
+        My first objective was to develop reliable object detection and
+        localization. I used a YOLOv8 model to detect a yellow caution sign
+        from the Unitree Go2's RGB-D camera feed.
+      </p>
+
+      <p>
+        I created a ROS2 module to capture approximately 700 images for
+        training, validation, and testing. The final perception node combines
+        YOLOv8 detection, depth sampling, temporal filtering, 3D coordinate
+        reconstruction, tf2 coordinate transformation, and RViz2 visualization.
+      </p>
+
+      <p>
+        <strong>Pipeline:</strong>
+        Detect object → determine bounding-box center → obtain depth →
+        reconstruct camera-frame position → transform into map coordinates →
+        filter repeated detections → publish persistent object location.
+      </p>
+
+    </div>
+
+
+    <!-- PHOTO AREA -->
+
+    <div class="project-media-grid">
+
+      <figure class="project-media">
+
+        <img
+          src="../resources/cnxn1/detection.png"
+          alt="YOLOv8 caution sign detection visualized in RViz2"
+        >
+
+        <figcaption>
+          YOLOv8 detection bounding box and RViz2 visualization.
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="project-media">
+
+        <img
+          src="../resources/cnxn1/snapshot.png"
+          alt="YOLOv8 training snapshot"
+        >
+
+        <figcaption>
+          Training and validation snapshot from the custom object-detection dataset.
+        </figcaption>
+
+      </figure>
+
+    </div>
+
+
+
+    <!-- ========================================
+         CAMERA MODEL
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        MODEL / 01 · CAMERA INTRINSICS
+      </div>
+
+      <p>
+        YOLOv8 returns a bounding box around the detected object. The center of
+        this box becomes the image-space coordinate
+        <strong>(u, v)</strong>.
+      </p>
+
+      <p>
+        The RGB-D camera also provides the depth
+        <strong>Z</strong>, while ROS2's CameraInfo topic provides the
+        intrinsic camera parameters.
+      </p>
+
+
+      <div class="equation">
+        K =<br>
+        [ fx   0   cx ]<br>
+        [ 0    fy  cy ]<br>
+        [ 0    0    1 ]
+      </div>
+
+
+      <p>
+        <strong>fx</strong> and <strong>fy</strong> are the camera focal
+        lengths expressed in pixels. <strong>cx</strong> and
+        <strong>cy</strong> define the principal point of the image.
+      </p>
+
+    </div>
+
+
+
+    <!-- CAMERA INFO CODE -->
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>CAMERA_INTRINSICS.PY</span>
+        <span>PYTHON · ROS2</span>
+      </div>
+
+<pre><code>def camera_info_callback(self, msg: CameraInfo):
+    K = msg.k
+
+    self.fx = K[0]
+    self.fy = K[4]
+    self.cx = K[2]
+    self.cy = K[5]
+
+    # Camera intrinsics remain constant,
+    # so the subscription is no longer needed.
+    self.destroy_subscription(self.cam_info_sub)</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         YOLO BOUNDING BOX
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        MODEL / 02 · DETECTION CENTER
+      </div>
+
+
+      <div class="equation">
+        u = (x₁ + x₂) / 2
+        <br><br>
+        v = (y₁ + y₂) / 2
+      </div>
+
+
+      <p>
+        YOLO provides the upper-left and lower-right corners of the detected
+        bounding box. Averaging these values gives the approximate center of
+        the object in image coordinates.
+      </p>
+
+    </div>
+
+
+
+    <!-- YOLO PIXEL CODE -->
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>YOLO_BOUNDING_BOX.PY</span>
+        <span>PYTHON · YOLOV8</span>
+      </div>
+
+<pre><code>x1, y1, x2, y2 = map(int, box.xyxy[0])
+
+# Bounding-box center in pixel coordinates
+u = (x1 + x2) // 2
+v = (y1 + y2) // 2</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         DEPTH FILTERING
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        MODEL / 03 · DEPTH FILTERING
+      </div>
+
+      <p>
+        Instead of trusting one depth pixel, I sample a small
+        <strong>5 × 5</strong> neighborhood around the bounding-box center.
+        Invalid and zero-valued measurements are removed, and the median
+        remaining depth value is used as Z.
+      </p>
+
+      <p>
+        Using the median makes the localization system less sensitive to
+        individual noisy depth pixels.
+      </p>
+
+    </div>
+
+
+
+    <!-- DEPTH CODE -->
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>DEPTH_FILTERING.PY</span>
+        <span>PYTHON · NUMPY</span>
+      </div>
+
+<pre><code>def get_stable_depth(self, u, v, window=5):
+
+    h, w = self.depth_image.shape
+    half = window // 2
+
+    umin = max(0, u - half)
+    umax = min(w, u + half + 1)
+
+    vmin = max(0, v - half)
+    vmax = min(h, v + half + 1)
+
+    patch = self.depth_image[
+        vmin:vmax,
+        umin:umax
+    ].astype(np.float32)
+
+    # Remove invalid measurements
+    patch = patch[np.isfinite(patch)]
+    patch = patch[patch > 0]
+
+    if len(patch) == 0:
+        return None
+
+    return np.median(patch)</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         PIXEL TO CAMERA COORDINATES
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        MODEL / 04 · PIXEL → 3D CAMERA POSITION
+      </div>
+
+
+      <p>
+        The difference between the detection and the camera's principal point
+        gives the object's pixel displacement from the optical center.
+      </p>
+
+
+      <div class="equation">
+        Δu = u - cx
+        <br><br>
+        Δv = v - cy
+      </div>
+
+
+      <p>
+        Using the pinhole-camera model and measured depth Z, the object can
+        then be reconstructed in the camera coordinate frame.
+      </p>
+
+
+      <div class="equation">
+        Xc = ((u - cx) Z) / fx
+        <br><br>
+        Yc = ((v - cy) Z) / fy
+        <br><br>
+        Zc = Z
+      </div>
+
+
+      <p>
+        The resulting point
+        <strong>(Xc, Yc, Zc)</strong>
+        represents the object's three-dimensional position relative to the
+        front camera.
+      </p>
+
+
+      <div class="technical-label">
+        STRAIGHT-LINE CAMERA DISTANCE
+      </div>
+
+
+      <div class="equation">
+        D = √(Xc² + Yc² + Zc²)
+      </div>
+
+    </div>
+
+
+
+    <!-- CAMERA COORDINATE CODE -->
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>PIXEL_TO_CAMERA_FRAME.PY</span>
+        <span>PYTHON</span>
+      </div>
+
+<pre><code>def compute_global_position(self, u, v, Z):
+
+    # Pixel coordinate -> camera-frame position
+    Xc = (u - self.cx) * Z / self.fx
+    Yc = (v - self.cy) * Z / self.fy
+
+    point_cam = PointStamped()
+
+    point_cam.header.frame_id = "unitree_go2/front_cam"
+    point_cam.header.stamp = self.get_clock().now().to_msg()
+
+    point_cam.point.x = Xc
+    point_cam.point.y = Yc
+    point_cam.point.z = float(Z)</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         TF2 TRANSFORM
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        MODEL / 05 · CAMERA FRAME → MAP FRAME
+      </div>
+
+
+      <p>
+        The reconstructed point initially exists relative to the robot's front
+        camera. This coordinate moves whenever the robot moves, so it cannot be
+        used directly as a persistent object location.
+      </p>
+
+
+      <div class="equation">
+        p_camera =
+        [ Xc ]<br>
+        [ Yc ]<br>
+        [ Zc ]<br>
+        [ 1  ]
+      </div>
+
+
+      <div class="equation">
+        p_map = T(map←camera) · p_camera
+      </div>
+
+
+      <p>
+        ROS2 tf2 provides the transformation between the front camera frame
+        and the global map frame. Applying that transform converts the
+        camera-relative detection into a fixed coordinate in the simulated
+        warehouse.
+      </p>
+
+    </div>
+
+
+
+    <!-- TF2 CODE -->
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>TF2_GLOBAL_TRANSFORM.PY</span>
+        <span>PYTHON · ROS2 TF2</span>
+      </div>
+
+<pre><code>transform = self.tf_buffer.lookup_transform(
+    "map",
+    "unitree_go2/front_cam",
+    rclpy.time.Time()
+)
+
+point_map = do_transform_point(
+    point_cam,
+    transform
+)
+
+return point_map</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         COMPLETE LOCALIZATION PIPELINE
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        IMPLEMENTATION / 06 · COMPLETE LOCALIZATION STEP
+      </div>
+
+      <p>
+        The detection, depth filtering, camera reconstruction, and tf2
+        transformation are combined inside the YOLO image callback.
+      </p>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>DETECTION_TO_GLOBAL_POSITION.PY</span>
+        <span>PYTHON · ROS2</span>
+      </div>
+
+<pre><code># YOLO bounding box
+x1, y1, x2, y2 = map(int, box.xyxy[0])
+
+# Bounding-box center
+u = (x1 + x2) // 2
+v = (y1 + y2) // 2
+
+
+# Obtain stable depth around the center pixel
+Z = self.get_stable_depth(u, v)
+
+if Z is None:
+    continue
+
+
+# Convert millimeters to meters when required
+if self.depth_image.dtype == np.uint16:
+    Z /= 1000.0
+
+
+# Pixel + depth -> camera frame -> map frame
+point_map = self.compute_global_position(
+    u,
+    v,
+    Z
+)
+
+
+# Store transformed measurement
+track["positions"].append(
+    point_map.point
+)</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         TEMPORAL FILTERING
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        FILTER / 07 · TEMPORAL VALIDATION
+      </div>
+
+      <p>
+        A single YOLO detection is not immediately accepted as a real object.
+        The same detection must appear repeatedly across frames before its
+        global position is recorded.
+      </p>
+
+
+      <div class="equation">
+        hits ≥ 40
+      </div>
+
+
+      <p>
+        After a track reaches the required detection count, several independent
+        global position estimates are collected and averaged.
+      </p>
+
+
+      <div class="equation">
+        x̄ = (1/N) Σ xi
+        <br><br>
+        ȳ = (1/N) Σ yi
+        <br><br>
+        z̄ = (1/N) Σ zi
+      </div>
+
+
+      <p>
+        This reduces frame-to-frame localization noise before the object is
+        saved as a persistent map location.
+      </p>
+
+    </div>
+
+
+
+    <!-- TEMPORAL FILTERING CODE -->
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>TEMPORAL_FILTERING.PY</span>
+        <span>PYTHON</span>
+      </div>
+
+<pre><code># Require repeated detections
+if track["hits"] < self.min_hits or track["saved"]:
+    continue
+
+
+# Store repeated transformed positions
+track["positions"].append(point_map.point)
+
+
+# Average several independent measurements
+if len(track["positions"]) >= 5:
+
+    avg = Point()
+
+    avg.x = np.mean([
+        p.x for p in track["positions"]
+    ])
+
+    avg.y = np.mean([
+        p.y for p in track["positions"]
+    ])
+
+    avg.z = np.mean([
+        p.z for p in track["positions"]
+    ])
+
+
+    pose = Pose()
+
+    pose.position = avg
+    pose.orientation.w = 1.0</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         DUPLICATE SUPPRESSION
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        FILTER / 08 · DUPLICATE SUPPRESSION
+      </div>
+
+      <p>
+        Before saving the position, the new detection is compared against
+        previously stored caution-sign locations.
+      </p>
+
+
+      <div class="equation">
+        d = √((x₂ - x₁)² + (y₂ - y₁)²)
+      </div>
+
+
+      <p>
+        If another stored object is within the merge radius, the detection is
+        treated as the same object rather than creating a duplicate map entry.
+      </p>
+
+    </div>
+
+
+
+    <!-- DUPLICATE FILTER CODE -->
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>DUPLICATE_FILTER.PY</span>
+        <span>PYTHON</span>
+      </div>
+
+<pre><code>def is_new_pose(self, x, y):
+
+    for pose in self.saved_poses:
+
+        dx = pose.position.x - x
+        dy = pose.position.y - y
+
+        dist = math.sqrt(
+            dx * dx +
+            dy * dy
+        )
+
+        if dist < self.merge_radius_m:
+            return False
+
+    return True</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         RESULT
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        PHASE 1 RESULT
+      </div>
+
+      <p>
+        The resulting ROS2 module converts a raw RGB-D camera stream into
+        stable, persistent object locations in the global map frame.
+        Detected caution signs can then be published as a PoseArray and
+        visualized in RViz2 for use by later navigation and autonomy systems.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+  <!-- =========================
+       PHASE 2
+       ========================= -->
+
+  <!-- =========================
+     PHASE 2
+     ========================= -->
+
+<section class="case-section" id="phase-2">
+
+  <div class="wrap">
+
+    <div class="case-section-heading">
+
+      <span class="case-number">02</span>
+
+      <div>
+        <div class="eyebrow">Phase 2</div>
+        <h2>Walking Policy</h2>
+      </div>
+
+    </div>
+
+
+    <!-- OVERVIEW -->
+
+    <div class="case-copy case-copy-wide">
+
+      <p>
+        The next objective was to train a reinforcement-learning policy for
+        stable quadruped walking. The Unitree Go2 requires coordinated control
+        across 12 joints: four hip joints, four thigh joints, and four calf joints.
+      </p>
+
+      <p>
+        The policy outputs a 12-dimensional action vector that is converted into
+        joint-position targets. I shaped the reward function to encourage forward
+        velocity tracking, smooth body motion, balanced leg participation, stable
+        ground contact, and symmetric motion between the left and right legs.
+      </p>
+
+      <p>
+        <strong>Pipeline:</strong>
+        RL action vector → joint scaling and sign correction → smoothed joint targets →
+        contact and motion measurement → reward / penalty calculation → policy update.
+      </p>
+
+    </div>
+
+
+    <!-- PHOTO / VIDEO AREA -->
+
+    <div class="project-media-grid">
+
+      <figure class="project-media project-media-large">
+
+        <img
+          src="../resources/cnxn1/robot_walking.png"
+          alt="Unitree Go2 reinforcement learning walking policy"
+        >
+
+        <figcaption>
+          Reinforcement-learning walking policy during gait development and tuning.
+        </figcaption>
+
+      </figure>
+
+    </div>
+
+
+
+    <!-- ========================================
+         ACTION VECTOR
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        CONTROL / 01 · 12-JOINT ACTION VECTOR
+      </div>
+
+      <p>
+        At every policy step, the reinforcement-learning agent produces a
+        12-dimensional action vector:
+      </p>
+
+      <div class="equation">
+        a =
+        [ a₁, a₂, ..., a₁₂ ]ᵀ
+      </div>
+
+      <p>
+        Each action corresponds to one leg joint. Before the command is sent to
+        the robot, I apply joint-specific sign corrections and scaling factors.
+        This allows the same normalized RL action range to produce appropriate
+        angular motion for hips, thighs, and calves.
+      </p>
+
+      <div class="equation">
+        a' = S ⊙ a
+      </div>
+
+      <div class="equation">
+        q<sub>desired</sub> =
+        q<sub>default</sub> + G ⊙ a'
+      </div>
+
+      <p>
+        Here, <strong>S</strong> is the action-sign vector,
+        <strong>G</strong> is the joint scaling vector, and
+        <strong>⊙</strong> represents element-wise multiplication.
+      </p>
+
+    </div>
+
+
+
+    <!-- ACTION CODE -->
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>APPLY_ACTION.PY</span>
+        <span>PYTHON · PYTORCH</span>
+      </div>
+
+<pre><code>def _build_action_sign(self):
+    sign = torch.ones(12, device=self.device)
+
+    # Hip joints
+    sign[0] = -1.0
+    sign[1] = -1.0
+    sign[2] = -1.0
+    sign[3] = -1.0
+
+    # Thigh joints
+    sign[4:8] = 1.0
+
+    # Calf joints
+    sign[8]  =  1.0
+    sign[9]  =  1.0
+    sign[10] = -1.0
+    sign[11] = -1.0
+
+    self.action_sign = sign.unsqueeze(0)
+
+
+def _apply_action(self):
+
+    default = self.robot.data.default_joint_pos
+
+    if self.joint_targets is None:
+        self.joint_targets = default.clone()
+
+    # RL actions are limited to [-1, 1]
+    a = torch.clamp(self.actions, -1.0, 1.0)
+
+    if not hasattr(self, "action_sign"):
+        self._build_action_sign()
+
+    # Correct joint directions
+    a = a * self.action_sign
+
+    # Joint-specific motion scale
+    scale = torch.tensor(
+        [
+            0.05, 0.05, 0.05, 0.05,   # hips
+            0.55, 0.55, 0.55, 0.55,   # thighs
+            0.70, 0.70, 0.70, 0.70,   # calves
+        ],
+        device=self.device,
+    ).unsqueeze(0)
+
+    desired = default + scale * a
+
+    # Hold hips near default orientation
+    desired[:, 0:4] = default[:, 0:4]</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         SMOOTH ACTUATION
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        CONTROL / 02 · ACTION SMOOTHING
+      </div>
+
+      <p>
+        Directly applying each new RL output produced abrupt joint motion, so I
+        limited how quickly the commanded joint target could change between
+        simulation steps.
+      </p>
+
+      <div class="equation">
+        Δq =
+        clamp(
+        q<sub>desired</sub> - q<sub>target</sub>,
+        -Δq<sub>max</sub>,
+        Δq<sub>max</sub>
+        )
+      </div>
+
+      <div class="equation">
+        q<sub>target,new</sub> =
+        q<sub>target,old</sub> + Δq
+      </div>
+
+      <p>
+        This effectively acts as a joint-command slew-rate limiter, reducing
+        twitching and encouraging smoother gait transitions.
+      </p>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>ACTION_SMOOTHING.PY</span>
+        <span>PYTHON · PYTORCH</span>
+      </div>
+
+<pre><code># Prevent abrupt joint-target changes
+max_delta = 0.10
+
+delta = torch.clamp(
+    desired - self.joint_targets,
+    -max_delta,
+    max_delta
+)
+
+self.joint_targets = self.joint_targets + delta
+
+self.robot.set_joint_position_target(
+    self.joint_targets
+)</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         CONTACT SENSOR
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        SENSOR / 03 · FOOT CONTACT & AIRTIME
+      </div>
+
+      <p>
+        A contact sensor attached to the feet provides the net contact force for
+        each leg. The magnitude of this force is compared against a threshold to
+        determine whether each foot is touching the ground.
+      </p>
+
+      <div class="equation">
+        F<sub>i</sub> = ||F⃗<sub>i</sub>||
+      </div>
+
+      <div class="equation">
+        c<sub>i</sub> =
+        1, if F<sub>i</sub> &gt; F<sub>threshold</sub>
+        <br>
+        0, otherwise
+      </div>
+
+      <p>
+        The same sensor also tracks each foot's current airtime. These values let
+        the reward function distinguish between normal swing phases and legs that
+        remain off the ground for too long.
+      </p>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>CONTACT_SENSOR.PY</span>
+        <span>ISAAC LAB · PYTORCH</span>
+      </div>
+
+<pre><code>data = self.feet_sensor.data
+
+# Net contact force magnitude for each foot
+Fmag = torch.linalg.norm(
+    data.net_forces_w,
+    dim=-1
+)
+
+thr = self.feet_sensor.cfg.force_threshold
+
+# 1 = foot touching ground
+# 0 = foot in the air
+contacts = (Fmag > thr).float()
+
+# Current swing duration of each foot
+air_time = data.current_air_time</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         CONTACT REWARD
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        REWARD / 04 · GAIT CONTACT PATTERN
+      </div>
+
+      <p>
+        The reward function evaluates how many feet are in contact with the
+        ground and how many are actively in a swing phase.
+      </p>
+
+      <div class="equation">
+        N<sub>contact</sub> =
+        Σ c<sub>i</sub>
+      </div>
+
+      <p>
+        A Gaussian-shaped reward favors approximately three simultaneous ground
+        contacts while penalizing unstable configurations such as two-contact or
+        zero-contact states.
+      </p>
+
+      <div class="equation">
+        R<sub>3-contact</sub> =
+        exp(
+        -((N<sub>contact</sub> - 3) / σ<sub>c</sub>)²
+        )
+      </div>
+
+      <p>
+        I also rewarded a gait in which approximately one leg is in a meaningful
+        swing phase while the robot continues making forward progress.
+      </p>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>CONTACT_REWARD.PY</span>
+        <span>PYTHON · PYTORCH</span>
+      </div>
+
+<pre><code>n_contact = contacts.sum(dim=1)
+
+sigma_c = 0.35
+
+# Reward approximately three feet contacting the floor
+r_three = torch.exp(
+    -((n_contact - 3.0) / sigma_c) ** 2
+)
+
+# Penalize two-foot and zero-foot contact states
+pen_two = torch.exp(
+    -((n_contact - 2.0) / sigma_c) ** 2
+)
+
+pen_air = torch.exp(
+    -((n_contact - 0.0) / sigma_c) ** 2
+)
+
+# Count legs that have been airborne long enough
+t_swing = 0.12
+
+num_swing = (
+    air_time > t_swing
+).float().sum(dim=1)
+
+r_one_swing = torch.exp(
+    -((num_swing - 1.0) / 0.25) ** 2
+)</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         VELOCITY
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        REWARD / 05 · BODY VELOCITY
+      </div>
+
+      <p>
+        The robot's world-frame velocity is transformed into the robot's body
+        frame so the reward can measure forward, lateral, and vertical motion
+        relative to the direction the robot is facing.
+      </p>
+
+      <div class="equation">
+        v<sub>b</sub> =
+        R<sub>wb</sub>ᵀ v<sub>w</sub>
+      </div>
+
+      <p>
+        The forward velocity component is rewarded when it matches the commanded
+        speed:
+      </p>
+
+      <div class="equation">
+        R<sub>vx</sub> =
+        exp(
+        -((v<sub>x</sub> - v<sub>x,cmd</sub>) / 0.15)²
+        )
+      </div>
+
+      <p>
+        Lateral velocity is discouraged so that the robot moves in a straighter
+        line instead of drifting sideways.
+      </p>
+
+      <div class="equation">
+        R<sub>lateral</sub> =
+        exp(-(v<sub>y</sub> / 0.20)²)
+      </div>
+
+      <p>
+        Vertical velocity is penalized to reduce hopping and excessive body
+        oscillation.
+      </p>
+
+      <div class="equation">
+        P<sub>vertical</sub> =
+        v<sub>z</sub>²
+      </div>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>VELOCITY_REWARD.PY</span>
+        <span>PYTHON · PYTORCH</span>
+      </div>
+
+<pre><code>v_b = self._lin_vel_body()
+
+vx = v_b[:, 0]
+vy = v_b[:, 1]
+vz = v_b[:, 2]
+
+vx_cmd = self.cmd[:, 0]
+
+# Forward command tracking
+r_vx = torch.exp(
+    -((vx - vx_cmd) / 0.15) ** 2
+)
+
+# Penalize sideways drift
+r_lat = torch.exp(
+    -(vy / 0.20) ** 2
+)
+
+# Penalize vertical bouncing
+vz_pen = vz ** 2</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         LEG MOTION
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        REWARD / 06 · LEG PARTICIPATION
+      </div>
+
+      <p>
+        To prevent the policy from relying heavily on only a subset of the legs,
+        I measured the total joint motion of each leg using the absolute joint
+        velocities of its hip, thigh, and calf.
+      </p>
+
+      <div class="equation">
+        M<sub>i</sub> =
+        |q̇<sub>hip,i</sub>|
+        +
+        |q̇<sub>thigh,i</sub>|
+        +
+        |q̇<sub>calf,i</sub>|
+      </div>
+
+      <p>
+        The average motion across all four legs is:
+      </p>
+
+      <div class="equation">
+        M̄ =
+        (M<sub>FL</sub> +
+         M<sub>FR</sub> +
+         M<sub>RL</sub> +
+         M<sub>RR</sub>) / 4
+      </div>
+
+      <p>
+        Each leg's motion is then normalized against this mean:
+      </p>
+
+      <div class="equation">
+        r<sub>i</sub> =
+        M<sub>i</sub> / (M̄ + ε)
+      </div>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>LEG_MOTION.PY</span>
+        <span>PYTHON · PYTORCH</span>
+      </div>
+
+<pre><code>qd = self.robot.data.joint_vel
+
+leg_groups = torch.tensor(
+    [
+        [0, 4, 8],    # Front Left
+        [1, 5, 9],    # Front Right
+        [2, 6, 10],   # Rear Left
+        [3, 7, 11],   # Rear Right
+    ],
+    device=self.device,
+)
+
+# Total motion of each leg
+leg_motion = torch.sum(
+    torch.abs(qd[:, leg_groups]),
+    dim=2
+)
+
+# Mean motion across all four legs
+mean_motion = leg_motion.mean(
+    dim=1,
+    keepdim=True
+)
+
+# Motion of each leg relative to the average
+rel_motion = leg_motion / (
+    mean_motion + 1e-4
+)</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         DEAD LEG
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        PENALTY / 07 · DEAD LEG DETECTION
+      </div>
+
+      <p>
+        A major failure mode during training was a "dead leg": one leg would
+        contribute much less motion than the others while the remaining legs
+        compensated for it.
+      </p>
+
+      <p>
+        I penalized legs whose motion dropped below 60% of the average motion:
+      </p>
+
+      <div class="equation">
+        P<sub>dead</sub> =
+        Σ max(
+        0,
+        0.6 - r<sub>i</sub>
+        )
+      </div>
+
+      <p>
+        I also tracked persistent low-motion states. If any leg remains below a
+        motion threshold for roughly half a second, an additional stuck-leg
+        penalty is activated.
+      </p>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>DEAD_LEG_DETECTION.PY</span>
+        <span>PYTHON · PYTORCH</span>
+      </div>
+
+<pre><code># Penalize legs moving less than
+# 60% of the average leg motion
+dead_leg_pen = torch.relu(
+    0.6 - rel_motion
+).sum(dim=1)
+
+
+# Track persistent low-motion legs
+self.leg_stuck_counter = torch.where(
+    leg_motion < 0.05,
+    self.leg_stuck_counter + 1,
+    torch.zeros_like(self.leg_stuck_counter)
+)
+
+# Convert 0.5 seconds into control steps
+stuck_limit = 0.5 / (
+    self.cfg.sim.dt *
+    self.cfg.decimation
+)
+
+stuck_leg_pen = (
+    self.leg_stuck_counter > stuck_limit
+).any(dim=1).float()</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         LEG IMBALANCE
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        PENALTY / 08 · LEFT-RIGHT LEG IMBALANCE
+      </div>
+
+      <p>
+        Stable locomotion also required approximately symmetric motion between
+        corresponding left and right legs.
+      </p>
+
+      <p>
+        I normalized the difference between the rear legs and between the front
+        legs by the robot's average leg motion:
+      </p>
+
+      <div class="equation">
+        P<sub>rear imbalance</sub> =
+        |M<sub>RL</sub> - M<sub>RR</sub>| / M̄
+      </div>
+
+      <div class="equation">
+        P<sub>front imbalance</sub> =
+        |M<sub>FL</sub> - M<sub>FR</sub>| / M̄
+      </div>
+
+      <p>
+        Rear-leg airtime was also compared directly so that one hind leg could
+        not remain airborne significantly longer than its counterpart.
+      </p>
+
+      <div class="equation">
+        P<sub>air imbalance</sub> =
+        |t<sub>air,RL</sub> - t<sub>air,RR</sub>|
+      </div>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>LEG_IMBALANCE.PY</span>
+        <span>PYTHON · PYTORCH</span>
+      </div>
+
+<pre><code>m_FL = leg_motion[:, 0]
+m_FR = leg_motion[:, 1]
+m_RL = leg_motion[:, 2]
+m_RR = leg_motion[:, 3]
+
+motion_scale = (
+    m_FL + m_FR + m_RL + m_RR
+) / 4.0 + 1e-4
+
+# Left/right motion symmetry
+hind_imbalance = torch.abs(
+    m_RL - m_RR
+) / motion_scale
+
+front_imbalance = torch.abs(
+    m_FL - m_FR
+) / motion_scale
+
+# Rear-leg swing symmetry
+hind_air_imbalance = torch.abs(
+    air_time[:, 2] -
+    air_time[:, 3]
+)</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         FINAL REWARD
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        REWARD / 09 · WALKING OBJECTIVE
+      </div>
+
+      <p>
+        These terms were combined into one reward function. Positive terms
+        encourage upright posture, correct body height, forward velocity,
+        controlled yaw, and useful contact patterns. Negative terms discourage
+        tilt, hopping, joint collapse, dead legs, and asymmetric gait behavior.
+      </p>
+
+      <div class="equation">
+        R =
+        R<sub>stability</sub>
+        + R<sub>velocity</sub>
+        + R<sub>contact</sub>
+        - P<sub>motion</sub>
+        - P<sub>imbalance</sub>
+      </div>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>WALKING_REWARD.PY</span>
+        <span>PYTHON · ISAAC LAB</span>
+      </div>
+
+<pre><code>reward = (
+      2.0 * upright
+    + 3.0 * r_height
+
+    # Body stability
+    - 6.0 * tilt_pen
+    - 3.0 * pitch_pen
+    - 3.0 * vz_pen
+
+    # Velocity tracking
+    + 3.0 * r_vx
+    + 3.0 * r_lat
+    + 3.0 * r_yaw
+
+    # Ground-contact pattern
+    + 1.0 * r_three
+    + 0.5 * r_one_swing
+    - 1.0 * pen_two
+    - 1.0 * pen_air
+
+    # Leg participation and symmetry
+    - 0.08 * dead_leg_pen * gate
+    - 0.12 * hind_imbalance * gate
+    - 0.05 * front_imbalance * gate
+    - 0.08 * hind_air_imbalance * gate
+)</code></pre>
+
+    </div>
+
+
+
+    <!-- RESULT -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        PHASE 2 RESULT
+      </div>
+
+      <p>
+        This reward structure encouraged the policy to develop a smoother and
+        more balanced gait instead of maximizing forward movement through unstable
+        behaviors. Contact sensing, per-leg motion analysis, velocity tracking,
+        and persistent dead-leg detection gave the learning system explicit
+        feedback about both locomotion performance and gait quality.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+  <!-- =========================
+       PHASE 3
+       ========================= -->
+
+  <section class="case-section" id="phase-3">
+
+  <div class="wrap">
+
+    <div class="case-section-heading">
+
+      <span class="case-number">03</span>
+
+      <div>
+        <div class="eyebrow">LiDAR-Based Object Avoidance</div>
+        <h2>LiDAR-Based Object Avoidance</h2>
+      </div>
+
+    </div>
+
+
+    <!-- OVERVIEW -->
+
+    <div class="case-copy case-copy-wide">
+
+      <p>
+        After developing a stable walking policy, I added LiDAR-based obstacle
+        avoidance. The robot was trained around randomly placed spherical
+        obstacles and learned to detect blocked paths, turn toward open space,
+        and continue forward after clearing an obstacle.
+      </p>
+
+      <p>
+        <strong>Pipeline:</strong>
+        LiDAR scan → detect obstacle → compare left/right clearance →
+        adjust yaw → clear obstacle → reward successful avoidance.
+      </p>
+
+    </div>
+
+
+
+    <!-- MEDIA -->
+
+    <div class="project-media-grid">
+
+      <figure class="project-media project-media-large">
+
+        <img
+          src="../resources/cnxn1/avoid.png"
+          alt="Unitree Go2 detecting obstacles with LiDAR"
+        >
+
+        <figcaption>
+          LiDAR-based obstacle detection during training.
+        </figcaption>
+
+      </figure>
+
+
+    </div>
+
+
+
+    <!-- LIDAR SECTORS -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        SENSOR / 01 · DIRECTIONAL LIDAR
+      </div>
+
+      <p>
+        Instead of using the full LiDAR scan directly, I reduced the point cloud
+        into three directional measurements:
+        <strong>front</strong>, <strong>left</strong>, and
+        <strong>right</strong> clearance.
+      </p>
+
+      <div class="equation">
+        d<sub>front</sub> = min(rays in front sector)
+        <br><br>
+        d<sub>left</sub> = min(rays in left sector)
+        <br><br>
+        d<sub>right</sub> = min(rays in right sector)
+      </div>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>LIDAR_SECTORS.PY</span>
+        <span>ISAAC LAB · PYTORCH</span>
+      </div>
+
+<pre><code># LiDAR points expressed in the robot body frame
+x = rel_b[..., 0]
+y = rel_b[..., 1]
+z = rel_b[..., 2]
+
+# Ignore floor and ceiling returns
+height_filter = (z > -0.1) & (z < 1.5)
+
+near_x = (x > 0.0) & (x < 5.0)
+
+front_mask = near_x & (y.abs() < 0.6) & height_filter
+left_mask  = near_x & (y > 0.3) & height_filter
+right_mask = near_x & (y < -0.3) & height_filter
+
+def masked_min(d, mask):
+    filtered = torch.where(
+        mask,
+        d,
+        torch.full_like(d, max_range)
+    )
+    return filtered.min(dim=1).values
+
+d_front = masked_min(dist, front_mask)
+d_left  = masked_min(dist, left_mask)
+d_right = masked_min(dist, right_mask)</code></pre>
+
+    </div>
+
+
+
+    <!-- TURN LOGIC -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        CONTROL / 02 · TURN TOWARD OPEN SPACE
+      </div>
+
+      <p>
+        When an obstacle enters the safety region in front of the robot,
+        the relative left and right clearances determine the preferred
+        turning direction.
+      </p>
+
+      <div class="equation">
+        s = sign(d<sub>right</sub> - d<sub>left</sub>)
+      </div>
+
+      <p>
+        The sign of this difference is used with yaw velocity so the policy is
+        rewarded for turning toward the more open side.
+      </p>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>AVOIDANCE_REWARD.PY</span>
+        <span>PYTHON · PYTORCH</span>
+      </div>
+
+<pre><code>d_safe = 0.60
+
+# Obstacle proximity
+near = torch.relu(
+    d_safe - d_front
+) / d_safe
+
+near_pen = near ** 2
+
+# Decide which side has more free space
+turn_dir = torch.sign(
+    d_right - d_left
+)
+
+# Reward yaw in the open direction
+turn_align = torch.relu(
+    turn_dir * wz
+)
+
+turn_reward = (
+    turn_align * near_pen
+)
+
+# Collision penalty
+collision_pen = torch.clamp(
+    (0.5 - d_front) / 0.5,
+    0.0,
+    1.0
+)</code></pre>
+
+    </div>
+
+
+
+    <!-- RESULT -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        PHASE 3 RESULT
+      </div>
+
+      <p>
+        The resulting policy combined learned locomotion with directional
+        LiDAR feedback, allowing the robot to slow or turn near obstacles,
+        choose the more open side, and resume forward motion after clearing
+        the obstruction.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     PHASE 4
+     ========================= -->
+
+<section class="case-section" id="phase-4">
+
+  <div class="wrap">
+
+    <div class="case-section-heading">
+
+      <span class="case-number">04</span>
+
+      <div>
+        <div class="eyebrow">Phase 4</div>
+        <h2>Waypoint Navigation</h2>
+      </div>
+
+    </div>
+
+
+    <!-- OVERVIEW -->
+
+    <div class="case-copy case-copy-wide">
+
+      <p>
+        The final navigation layer combined the trained walking and obstacle
+        avoidance behaviors with waypoint-based guidance. The robot continuously
+        calculated its position relative to the next target waypoint and generated
+        forward-velocity and yaw commands to move toward it.
+      </p>
+
+      <p>
+        Additional logic handled narrow corridors, sharp turns, and nearby
+        obstacles so the robot could slow down, rotate, or temporarily reverse
+        without losing the overall navigation objective.
+      </p>
+
+      <p>
+        <strong>Pipeline:</strong>
+        Current position → target waypoint → heading error → velocity/yaw command →
+        obstacle correction → waypoint progress → advance to next waypoint.
+      </p>
+
+    </div>
+
+
+
+    <!-- MEDIA -->
+
+    <div class="project-media-grid">
+
+      <figure class="project-media project-media-large">
+
+        <img
+          src="../resources/cnxn1/turn.png"
+          alt="Unitree Go2 navigating through warehouse waypoints"
+        >
+
+        <figcaption>
+          Full navigation policy operating through the simulated warehouse.
+        </figcaption>
+
+      </figure>
+
+    </div>
+
+
+
+    <!-- ========================================
+         WAYPOINT VECTOR
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        NAVIGATION / 01 · WAYPOINT TARGETING
+      </div>
+
+      <p>
+        At each control step, the robot computes the vector between its current
+        planar position and the active waypoint.
+      </p>
+
+      <div class="equation">
+        Δp =
+        p<sub>target</sub> - p<sub>robot</sub>
+      </div>
+
+      <div class="equation">
+        d =
+        √(Δx² + Δy²)
+      </div>
+
+      <p>
+        The desired heading is calculated using the direction of this vector:
+      </p>
+
+      <div class="equation">
+        ψ<sub>target</sub> =
+        atan2(Δy, Δx)
+      </div>
+
+    </div>
+
+
+
+    <!-- WAYPOINT CODE -->
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>WAYPOINT_TARGETING.PY</span>
+        <span>PYTHON · PYTORCH</span>
+      </div>
+
+<pre><code>current_pos = self.robot.data.root_link_pos_w[:, :2]
+
+target = self.waypoints[
+    self.current_waypoint_idx
+]
+
+to_target = target - current_pos
+
+dist_to_target = torch.norm(
+    to_target,
+    dim=-1
+)
+
+# Desired robot heading
+waypoint_heading = torch.atan2(
+    to_target[:, 1],
+    to_target[:, 0]
+)
+
+self.heading_ref = waypoint_heading</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         HEADING ERROR
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        NAVIGATION / 02 · HEADING CONTROL
+      </div>
+
+      <p>
+        The current robot yaw is compared with the desired waypoint heading.
+        The angular difference is wrapped into a continuous
+        <strong>-π to π</strong> range.
+      </p>
+
+      <div class="equation">
+        e<sub>ψ</sub> =
+        atan2(
+        sin(ψ<sub>target</sub> - ψ),
+        cos(ψ<sub>target</sub> - ψ)
+        )
+      </div>
+
+      <p>
+        This heading error is then converted into a commanded yaw rate.
+      </p>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>HEADING_CONTROL.PY</span>
+        <span>PYTHON</span>
+      </div>
+
+<pre><code>current_yaw = self._yaw_from_quat(
+    self.robot.data.root_quat_w
+)
+
+heading_err = torch.atan2(
+    torch.sin(
+        self.heading_ref - current_yaw
+    ),
+    torch.cos(
+        self.heading_ref - current_yaw
+    )
+)
+
+# Ignore very small heading errors
+significant_err = (
+    heading_err.abs() > 0.1
+)
+
+yaw_correction = torch.where(
+    significant_err,
+
+    torch.clamp(
+        heading_err * 1.5,
+        -self.cfg.max_yaw_rate,
+        self.cfg.max_yaw_rate
+    ),
+
+    torch.zeros_like(heading_err)
+)</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         CORRIDOR NAVIGATION
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        NAVIGATION / 03 · CORRIDOR CENTERING
+      </div>
+
+      <p>
+        In narrow corridors, side-wall LiDAR readings are used to keep the robot
+        centered rather than treating the walls themselves as obstacles.
+      </p>
+
+      <div class="equation">
+        e<sub>wall</sub> =
+        k(d<sub>left</sub> - d<sub>right</sub>)
+      </div>
+
+      <p>
+        If the robot is closer to one wall than the other, this difference adds
+        a small yaw correction toward the center of the corridor.
+      </p>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>CORRIDOR_CONTROL.PY</span>
+        <span>PYTHON · LIDAR</span>
+      </div>
+
+<pre><code># Detect narrow corridor
+in_corridor = (
+    (self.lidar_left  < 2.0) &
+    (self.lidar_right < 2.0) &
+    (self.lidar_front > 2.0)
+)
+
+# Increase heading authority inside corridor
+corridor_yaw_gain = torch.where(
+    in_corridor,
+    torch.full_like(heading_err, 2.5),
+    torch.full_like(heading_err, 1.5)
+)
+
+yaw_correction = torch.where(
+    significant_err,
+
+    torch.clamp(
+        heading_err * corridor_yaw_gain,
+        -self.cfg.max_yaw_rate,
+        self.cfg.max_yaw_rate
+    ),
+
+    torch.zeros_like(heading_err)
+)
+
+# Center between the two walls
+wall_center_err = (
+    self.lidar_left -
+    self.lidar_right
+) * 0.15
+
+corridor_correction = torch.where(
+    in_corridor,
+    yaw_correction + wall_center_err,
+    yaw_correction
+)</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         SHARP TURNS
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        NAVIGATION / 04 · SHARP TURN HANDLING
+      </div>
+
+      <p>
+        Large heading errors indicate that the robot must perform a sharp turn.
+        Instead of stopping completely, forward speed is reduced while the yaw
+        command is increased.
+      </p>
+
+      <div class="equation">
+        |e<sub>ψ</sub>| &gt; 0.75
+        &nbsp;→&nbsp;
+        sharp turn
+      </div>
+
+      <p>
+        If the robot is also extremely close to an obstacle during the turn,
+        the forward command becomes slightly negative so the robot can create
+        room before rotating.
+      </p>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>SHARP_TURN_CONTROL.PY</span>
+        <span>PYTHON</span>
+      </div>
+
+<pre><code>sharp_turn_needed = (
+    heading_err.abs() > 0.75
+)
+
+too_close_while_turning = (
+    sharp_turn_needed &
+    (self.lidar_front < 0.6)
+)
+
+SHARP_TURN_SPEED_FACTOR = 0.55
+
+sharp_turn_speed = torch.where(
+
+    too_close_while_turning,
+
+    # Reverse slightly if boxed in
+    torch.full_like(
+        waypoint_speed_scale,
+        -0.3
+    ),
+
+    torch.where(
+        sharp_turn_needed,
+
+        # Slow forward movement during turn
+        waypoint_speed_scale *
+        SHARP_TURN_SPEED_FACTOR,
+
+        waypoint_speed_scale
+    )
+)</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         COMMAND OUTPUT
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        NAVIGATION / 05 · MOTION COMMAND
+      </div>
+
+      <p>
+        The navigation controller ultimately produces two high-level commands:
+        forward velocity and yaw rate.
+      </p>
+
+      <div class="equation">
+        command =
+        [v<sub>x</sub>, ω<sub>z</sub>]
+      </div>
+
+      <p>
+        These commands become observations for the reinforcement-learning
+        locomotion policy, which determines the corresponding 12-joint gait.
+      </p>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>NAVIGATION_COMMAND.PY</span>
+        <span>PYTHON</span>
+      </div>
+
+<pre><code># Forward velocity
+self.cmd[go_forward, 0] = (
+    self.cfg.max_lin_vel
+    * corridor_speed[go_forward]
+    * sharp_turn_speed[go_forward]
+)
+
+# Yaw velocity
+self.cmd[go_forward, 1] = torch.where(
+
+    sharp_turn_needed[go_forward],
+
+    torch.sign(
+        heading_err[go_forward]
+    ) * sharp_turn_yaw_rate[go_forward],
+
+    corridor_correction[go_forward]
+)</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         WAYPOINT REWARD
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        REWARD / 06 · NAVIGATION PROGRESS
+      </div>
+
+      <p>
+        The policy is rewarded for reducing its distance to the current waypoint.
+        I tracked progress independently along the global X and Y directions and
+        added a larger bonus when the target waypoint was reached.
+      </p>
+
+      <div class="equation">
+        R<sub>x</sub> =
+        |Δx<sub>previous</sub>| -
+        |Δx<sub>current</sub>|
+      </div>
+
+      <div class="equation">
+        R<sub>y</sub> =
+        |Δy<sub>previous</sub>| -
+        |Δy<sub>current</sub>|
+      </div>
+
+      <p>
+        Positive values mean the robot moved closer to the target.
+      </p>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>WAYPOINT_REWARD.PY</span>
+        <span>PYTHON · REINFORCEMENT LEARNING</span>
+      </div>
+
+<pre><code>target = self.waypoints[
+    self.current_waypoint_idx
+]
+
+dx = target[:, 0] - current_pos[:, 0]
+dy = target[:, 1] - current_pos[:, 1]
+
+dist_to_waypoint = torch.sqrt(
+    dx**2 + dy**2
+)
+
+# Distance from previous position
+prev_dx = (
+    self.waypoints[
+        self.current_waypoint_idx
+    ][:, 0]
+    - self.prev_pos_waypoint[:, 0]
+)
+
+prev_dy = (
+    self.waypoints[
+        self.current_waypoint_idx
+    ][:, 1]
+    - self.prev_pos_waypoint[:, 1]
+)
+
+# Reward reduction in X/Y error
+x_progress = (
+    prev_dx.abs() -
+    dx.abs()
+)
+
+y_progress = (
+    prev_dy.abs() -
+    dy.abs()
+)
+
+x_reward = torch.clamp(
+    x_progress,
+    -1.0,
+    1.0
+)
+
+y_reward = torch.clamp(
+    y_progress,
+    -1.0,
+    1.0
+)</code></pre>
+
+    </div>
+
+
+
+    <!-- ========================================
+         WAYPOINT COMPLETION
+         ======================================== -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        NAVIGATION / 07 · WAYPOINT COMPLETION
+      </div>
+
+      <p>
+        Each waypoint has an acceptance radius. Once the robot enters that
+        region, the controller advances to the next waypoint in the route.
+      </p>
+
+      <div class="equation">
+        d &lt; r<sub>waypoint</sub>
+        &nbsp;→&nbsp;
+        waypoint reached
+      </div>
+
+    </div>
+
+
+
+    <div class="code-block">
+
+      <div class="code-header">
+        <span>WAYPOINT_ADVANCE.PY</span>
+        <span>PYTHON</span>
+      </div>
+
+<pre><code>current_radius = self.waypoint_radii[
+    self.current_waypoint_idx
+]
+
+reached = (
+    dist_to_waypoint <
+    current_radius
+).float()
+
+# Reward successful arrival
+waypoint_bonus = reached * 20.0
+
+# Advance to next waypoint
+self.current_waypoint_idx = torch.where(
+    dist_to_waypoint < 1.0,
+
+    (
+        self.current_waypoint_idx + 1
+    ) % len(self.waypoints),
+
+    self.current_waypoint_idx
+)</code></pre>
+
+    </div>
+
+
+
+    <!-- RESULT -->
+
+    <div class="technical-block">
+
+      <div class="technical-label">
+        PHASE 4 RESULT
+      </div>
+
+      <p>
+        This stage combined the previous locomotion and obstacle-avoidance
+        behaviors into a complete navigation system. The robot could follow a
+        sequence of warehouse waypoints while correcting its heading, centering
+        itself in narrow corridors, negotiating sharp turns, and continuing
+        toward the final destination after avoiding obstacles.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+</main>
+
+
+<footer>
+</footer>
+
+
+<script src="../script.js"></script>
+
+</body>
+</html>

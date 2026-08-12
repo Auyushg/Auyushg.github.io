@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auyush Ganapathy - Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo"><strong>AUYUSH GANAPATHY</strong><span>//</span>COMPUTATIONAL ENGINEERING PORTFOLIO</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">About Me</a></li>
+      <li><a href="projects.html" aria-current="page">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="page-header bracket-frame">
+  <div class="page-header-inner">
+    <div>
+      <div class="eyebrow">02 · Mission Manifest</div>
+      <h1>Projects</h1>
+      <p> My technical work, including internships, contributions to engineering organizations,
+        and personal projects</p>
+    </div>
+    <span class="page-header-eq">v = √(GM/r)</span>
+  </div>
+</div>
+
+<main class="projects-page">
+
+  <section class="projects-browser">
+    <div class="wrap">
+
+      <!-- CATEGORY BUTTONS -->
+      <div class="project-tabs" role="tablist" aria-label="Project categories">
+
+        <button
+          class="project-tab active"
+          data-category="industry"
+          type="button">
+          <span class="tab-number">01</span>
+          Industry Experience
+        </button>
+
+        <button
+          class="project-tab"
+          data-category="team"
+          type="button">
+          <span class="tab-number">02</span>
+          Team Projects
+        </button>
+
+        <button
+          class="project-tab"
+          data-category="personal"
+          type="button">
+          <span class="tab-number">03</span>
+          Personal Projects
+        </button>
+
+      </div>
+
+
+      <!-- =========================
+           INDUSTRY EXPERIENCE
+           ========================= -->
+
+      <div class="project-category active" data-project-category="industry">
+
+        <div class="project-category-head">
+          <div>
+            <div class="eyebrow">01 · Professional</div>
+            <h2>Industry Experience</h2>
+            <p>
+              Engineering projects and internships completed in professional and research 
+              environments.
+            </p>
+          </div>
+
+          <span class="category-code">IND / 01</span>
+        </div>
+
+
+        <div class="project-grid">
+          <a href="projects/helix.html" class="project-card">
+
+            <div class="project-card-top">
+              <span class="project-number">IND-01</span>
+              <span class="project-arrow">↗</span>
+            </div>
+
+            <div class="project-card-content">
+              <h3>Connection Helix AI and Robotics internship</h3>
+
+              <p>
+                RL-based quadruped locomotion, YOLO-integrated object and coordinate detection
+              </p>
+            </div>
+
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">Reinforcement Learning</span>
+              <span class="tag">Object Detection</span>
+              <span class="tag">AI</span>
+              <span class="tag">Isaac Lab</span>
+              <span class="tag">LiDAR</span>
+              <span class="tag">Simulation</span>
+              <span class="tag">Ununtu 22.04</span>
+              <span class="tag">ROS2 Humble</span>
+            </div>
+
+          </a>
+
+          <a href="projects/nasa.html" class="project-card">
+
+            <div class="project-card-top">
+              <span class="project-number">IND-02</span>
+              <span class="project-arrow">↗</span>
+            </div>
+
+            <div class="project-card-content">
+              <h3>NASA Robotics Academy internship</h3>
+
+              <p>
+                Lidar development and integration analysis
+              </p>
+            </div>
+
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">LiDAR</span>
+              <span class="tag">ROS2 Foxy</span>
+              <span class="tag">Ubuntu 20.04</span>
+            </div>
+
+          </a>
+
+
+          <!-- DUPLICATE THIS CARD FOR MORE INDUSTRY PROJECTS
+
+          <a href="projects/industry-project-2.html" class="project-card">
+
+            <div class="project-card-top">
+              <span class="project-number">IND-02</span>
+              <span class="project-arrow">↗</span>
+            </div>
+
+            <div class="project-card-content">
+              <h3>Future Industry Project</h3>
+
+              <p>
+                Add another internship, research position, or professional
+                engineering project here.
+              </p>
+            </div>
+            -->
+
+            
+
+          </a>
+
+        </div>
+      </div>
+
+
+      <!-- =========================
+           TEAM PROJECTS
+           ========================= -->
+
+      <div class="project-category" data-project-category="team">
+
+        <div class="project-category-head">
+          <div>
+            <div class="eyebrow">02 · Collaborative</div>
+            <h2>Team Projects</h2>
+
+            <p>
+              Engineering systems developed with student organizations,
+              research groups, and technical teams.
+            </p>
+          </div>
+
+          <span class="category-code">TEAM / 02</span>
+        </div>
+
+
+        <div class="project-grid">
+
+          <a href="projects/lra.html" class="project-card">
+
+            <div class="project-card-top">
+              <span class="project-number">TEAM-01</span>
+              <span class="project-arrow">↗</span>
+            </div>
+
+            <div class="project-card-content">
+              <h3>Longhorn Rocketry Association Simulations</h3>
+
+              <p>
+                6-DOF simulation Engineering, fidelity optimization and atmospheric model integration,
+                airbrake actuation, and execution at IREC.
+              </p>
+            </div>
+
+            <div class="tag-row">
+              <span class="tag">6-DOF equations of motion</span>
+              <span class="tag">Simulations</span>
+              <span class="tag">Weather Sounding</span>
+              <span class="tag">Python</span>
+              <span class="tag">RocketPy</span>
+              <span class="tag">PD Control Loop</span>
+            </div>
+
+          </a>
+
+
+      
+
+        </div>
+      </div>
+
+
+      <!-- =========================
+           PERSONAL PROJECTS
+           ========================= -->
+
+      <div class="project-category" data-project-category="personal">
+
+        <div class="project-category-head">
+          <div>
+            <div class="eyebrow">03 · Independent</div>
+            <h2>Personal Projects</h2>
+
+            <p>
+              Independent engineering builds exploring software,
+              simulation, controls, and computational methods.
+            </p>
+          </div>
+
+          <span class="category-code">PERS / 03</span>
+        </div>
+
+
+        <div class="project-grid">
+
+          <a href="projects/pinn.html" class="project-card">
+
+            <div class="project-card-top">
+              <span class="project-number">PERS-01</span>
+              <span class="project-arrow">↗</span>
+            </div>
+
+            <div class="project-card-content">
+              <h3>Neural Network Deep Learning of Rocket Trajectories</h3>
+
+              <p>
+                Trained a physics-informed neural network on learning and simulating
+                6-DOF rocket trajectories, implementing multi-trajectory physics recognition
+
+              </p>
+            </div>
+
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">Physics-informed Neural network</span>
+              <span class="tag">6-DOF equations</span>
+              <span class="tag">Simulation</span>
+              <span class="tag">Latin Hypercube Sampling</span>
+              <span class="tag">Grid Sampling</span>
+              <span class="tag">Loss function optimization</span>
+              <span class="tag">Hessian vector analysis</span>
+              <span class="tag">SGD</span>
+            </div>
+
+          </a>
+
+
+
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

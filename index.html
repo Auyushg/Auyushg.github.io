@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auyush Ganapathy - Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo"><strong>AUYUSH GANAPATHY</strong><span>//</span>COMPUTATIONAL ENGINEERING PORTFOLIO</div>
+  <nav>
+    <ul>
+      <li><a href="index.html" aria-current="page">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-lockup">
+
+        <!-- ===== PHOTO PLACEHOLDER =====
+             To add your photo: put an image file (e.g. "photo.jpg") in the same
+             folder as this HTML file, then replace the <span class="placeholder-text">
+             block below with:
+             <img src="photo.jpg" alt="Auyush Ganapathy">
+        -->
+        <div class="hero-id bracket-frame">
+          <div class="hero-id-photo">
+            <img src="resources/auyushg.jpg" alt="Auyush Ganapathy">
+          </div>
+        </div>
+
+        <div class="hero-text">
+          <div class="eyebrow">Systems nominal · Portfolio v2.6</div>
+          <h1>Hi! I'm <em>Auyush Ganapathy</em>.</h1>
+          <p class="hero-sub">I’m a Computational Engineering student at The University of Texas at Austin,
+            focused on computer modeling and artificial intelligence. I’m particularly interested in
+            developing software that solves complex engineering problems.
+          </p>
+          <div class="hero-actions">
+            <a href="projects.html" class="btn btn-primary">View projects</a>
+            <a href="contact.html" class="btn btn-ghost">Contact Me</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="hero-stage" aria-hidden="true">
+      <svg class="flight-path" viewBox="0 0 300 640" fill="none">
+        <path d="M40,620 C 40,420 260,380 260,220 C 260,110 190,60 150,10"
+              stroke="#28395480" stroke-width="1.5" stroke-dasharray="3 7"/>
+      </svg>
+      <svg class="rocket-icon" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2C12 2 17 6 17 13C17 15 16.5 16.5 16 17.5L12 22L8 17.5C7.5 16.5 7 15 7 13C7 6 12 2 12 2Z"
+              fill="#FF6B35"/>
+        <circle cx="12" cy="10" r="2" fill="#0B0F1A"/>
+        <path d="M7 15L3 18L5 13" stroke="#FF6B35" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M17 15L21 18L19 13" stroke="#FF6B35" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+
+  <div class="affiliation-cards">
+    <div class="affiliation-card">
+      <img src="resources/logos/utlogo.png" alt="The University of Texas at Austin logo">
+      <span>The University of Texas at Austin</span>
+    </div>
+
+    <div class="affiliation-card">
+      <img src="resources/logos/NASA.png" alt="NASA logo">
+      <span>NASA Johnson Space Center</span>
+    </div>
+
+    <div class="affiliation-card">
+      <img src="resources/logos/LRAlogo.jpg" alt="Longhorn Rocketry Association logo">
+      <span>Longhorn Rocketry Association</span>
+    </div>
+
+    <div class="affiliation-card">
+      <img src="resources/logos/cnxnlogo.png" alt="AI and Robotics logo">
+      <span>Center for AI & Robotics</span>
+    </div>
+  </div>
+
+
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Timeline</div>
+        <h2>Experience Timeline</h2>
+        <p>A short history about my STEM experience</p>
+      </div>
+
+      <div class="log log-2col bracket-frame">
+        <div class="log-entries">
+          <div class="log-entry reveal">
+            <time>Summer 2026 - Present</time>
+            <p><strong>Neural Network Rocket Trajectory Project</strong></p>
+            <p>Current Personal Project</p>
+          </div>
+          <div class="log-entry reveal">
+            <time>Fall 2025 - Present</time>
+            <p><strong>Longhorn Rocketry Association</strong></p>
+            <p>Simulation Engineer</p>
+          </div>
+          <div class="log-entry reveal">
+            <time>Fall 2025 - Spring 2026</time>
+            <p><strong>Helix AI & Robotics</strong></p>
+            <p>Intern</p>
+          </div>
+          <div class="log-entry reveal">
+            <time>Summer 2025</time>
+            <p><strong>NASA Johnson Space Center</strong></p>
+            <p>Intern</p>
+          </div>
+          <div class="log-entry reveal">
+            <time>2023 - 2025</time>
+            <p><strong>University of Houston Clear Lake</strong></p>
+            <p>Research Assistant</p>
+          </div>
+          <div class="log-entry reveal">
+            <time>2022 - 2025</time>
+            <p><strong>FRC Robotics - 118 Robonauts</strong></p>
+            <p>Software Engineer</p>
+          </div>
+        </div>
+
+        <!-- ===== PHOTO FLIPPER =====
+             Update the src paths below to match your actual filenames in
+             resources/browsing/. Add or remove <img> + <button> pairs together
+             (one of each per photo) if you have more or fewer than 5 photos. -->
+        <div class="photo-flipper" aria-label="Photo gallery">
+          <div class="flipper-track">
+            <img class="flipper-slide active" src="resources/browsing/AIpred.png" alt="AI rocket trajectory prediction">
+            <img class="flipper-slide" src="resources/browsing/detection.png" alt="Robotics object detection">
+            <img class="flipper-slide" src="resources/browsing/loss_col.png" alt="Neural network training loss">
+            <img class="flipper-slide" src="resources/browsing/LRA.png" alt="Longhorn Rocketry project">
+            <img class="flipper-slide" src="resources/browsing/trajpred.png" alt="Rocket trajectory prediction">
+          </div>
+
+          <div class="flipper-dots">
+            <button class="flipper-dot active" type="button" aria-label="Show photo 1"></button>
+            <button class="flipper-dot" type="button" aria-label="Show photo 2"></button>
+            <button class="flipper-dot" type="button" aria-label="Show photo 3"></button>
+            <button class="flipper-dot" type="button" aria-label="Show photo 4"></button>
+            <button class="flipper-dot" type="button" aria-label="Show photo 5"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <!-- 
+
+      <div class="section-head reveal" style="margin-top:80px;">
+        <div class="eyebrow">Instrument readings</div>
+        <p>Three panels, three disciplines. Numbers reflect years of applied, load-bearing use — not
+          self-assessed enthusiasm.</p>
+      </div>
+
+      <div class="panels reveal">
+        <div class="panel">
+          <div class="panel-title"><span>Mathematics</span><span>PNL-01</span></div>
+          <div class="gauge" style="--level:92%"><div class="gauge-label"><span>Convex optimization</span><span>92%</span></div><div class="gauge-track"><div class="gauge-fill"></div></div></div>
+          <div class="gauge" style="--level:85%"><div class="gauge-label"><span>Linear algebra</span><span>85%</span></div><div class="gauge-track"><div class="gauge-fill"></div></div></div>
+          <div class="gauge" style="--level:80%"><div class="gauge-label"><span>Probability &amp; stochastic proc.</span><span>80%</span></div><div class="gauge-track"><div class="gauge-fill"></div></div></div>
+          <div class="gauge" style="--level:74%"><div class="gauge-label"><span>Control theory</span><span>74%</span></div><div class="gauge-track"><div class="gauge-fill"></div></div></div>
+        </div>
+        <div class="panel">
+          <div class="panel-title"><span>Machine Learning</span><span>PNL-02</span></div>
+          <div class="gauge" style="--level:90%"><div class="gauge-label"><span>Deep learning (PyTorch)</span><span>90%</span></div><div class="gauge-track"><div class="gauge-fill"></div></div></div>
+          <div class="gauge" style="--level:83%"><div class="gauge-label"><span>Reinforcement learning</span><span>83%</span></div><div class="gauge-track"><div class="gauge-fill"></div></div></div>
+          <div class="gauge" style="--level:88%"><div class="gauge-label"><span>Time-series forecasting</span><span>88%</span></div><div class="gauge-track"><div class="gauge-fill"></div></div></div>
+          <div class="gauge" style="--level:70%"><div class="gauge-label"><span>MLOps &amp; deployment</span><span>70%</span></div><div class="gauge-track"><div class="gauge-fill"></div></div></div>
+        </div>
+        <div class="panel">
+          <div class="panel-title"><span>Systems &amp; Flight SW</span><span>PNL-03</span></div>
+          <div class="gauge" style="--level:87%"><div class="gauge-label"><span>Guidance &amp; trajectory design</span><span>87%</span></div><div class="gauge-track"><div class="gauge-fill"></div></div></div>
+          <div class="gauge" style="--level:78%"><div class="gauge-label"><span>State estimation (Kalman)</span><span>78%</span></div><div class="gauge-track"><div class="gauge-fill"></div></div></div>
+          <div class="gauge" style="--level:81%"><div class="gauge-label"><span>C++ / real-time systems</span><span>81%</span></div><div class="gauge-track"><div class="gauge-fill"></div></div></div>
+          <div class="gauge" style="--level:75%"><div class="gauge-label"><span>Python simulation tooling</span><span>75%</span></div><div class="gauge-track"><div class="gauge-fill"></div></div></div>
+        </div>
+      </div>
+    </div>
+    -->
+  </section>
+
+</main>
+
+<footer>
+</footer>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>

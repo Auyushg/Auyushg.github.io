@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auyush Ganapathy - Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo"><strong>AUYUSH GANAPATHY</strong><span>//</span>COMPUTATIONAL ENGINEERING PORTFOLIO</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html" aria-current="page">Contact Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="page-header bracket-frame">
+  <div class="page-header-inner">
+    <div>
+      <div class="eyebrow">04 · Ground Control</div>
+      <h1>Contact Me</h1>
+      <p>My Linkedin, email, and github are below. I look forward to speaking with you!</p>
+    </div>
+    <span class="page-header-eq">H(X) = −Σ p(x)log p(x)</span>
+  </div>
+</div>
+
+<main>
+  <section id="contact">
+    <div class="wrap">
+      <div class="ground reveal">
+        <div class="freqs">
+          <div class="freq"><span>Email</span><a href="mailto:auyushg@gmail.com">auyushg@gmail.com</a></div>
+          <div class="freq"><span>GitHub</span><a href="https://github.com/Auyushg" target="_blank" rel="noopener noreferrer">github.com/Auyushg</a></div>
+          <div class="freq"><span>LinkedIn</span><a href="https://linkedin.com/in/auyush-ganapathy/" target="_blank" rel="noopener noreferrer">linkedin.com/in/auyush-ganapathy/</a></div>
+          <div class="freq"><span>Resume</span><a href="resume.html">view page →</a></div>
+        </div>
+
+        <!-- Replace YOUR_FORM_ID below with the ID Formspree gives you
+             after you create a form at https://formspree.io -->
+        <form id="uplinkForm" action="https://formspree.io/f/mrpzblqa" method="POST">
+          <div class="field"><label for="name">Your Name</label><input id="name" name="name" type="text" required></div>
+          <div class="field"><label for="email">Your Email</label><input id="email" name="email" type="email" required></div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="4" required></textarea></div>
+          <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Send transmission</button>
+          <div class="form-status" id="formStatus" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
