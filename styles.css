@@ -1591,3 +1591,59 @@ footer{
   color: var(--ink-faint);
 }
 
+/* =========================================
+   AFFILIATION / CONNECTION CARD HOVER FIX
+   ========================================= */
+
+.affiliation-card {
+  position: relative;
+  isolation: isolate;
+
+  cursor: default;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Make the ENTIRE card respond consistently */
+.affiliation-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--accent-signal);
+  background: #151f33;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Prevent image/text from interfering with card hover */
+.affiliation-card img,
+.affiliation-card span {
+  pointer-events: none;
+}
+
+
+/* Smooth image response */
+.affiliation-card img {
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.affiliation-card:hover img {
+  transform: scale(1.05);
+}
+
+
+/* Highlight text too */
+.affiliation-card span {
+  transition: color 0.25s ease;
+}
+
+.affiliation-card:hover span {
+  color: var(--accent-signal);
+}
